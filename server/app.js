@@ -18,6 +18,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/contact', contactRoutes);
 
+
+app.get(   '/', (req, res) => {
+    res.send('API is running...');
+});
+
 app.use(errorHandler);
 
 module.exports = app;
